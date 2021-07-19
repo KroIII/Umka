@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.11">
+	<Item id="e43a9bda-86a7-42bc-8e2b-1a42ef660b33">
+		<Name>Умные_Технологии</Name>
+		<Code>000000001</Code>
+		<Description>Умные технологии</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

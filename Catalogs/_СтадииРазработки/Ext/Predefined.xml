@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.11">
+	<Item id="f0288fa2-35e3-4ee4-a15a-444409e1644e">
+		<Name>Анализ</Name>
+		<Code>000000001</Code>
+		<Description>Анализ</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3239a9af-56a5-460f-ad07-4c882d90428a">
+		<Name>Моделирование</Name>
+		<Code>000000002</Code>
+		<Description>Моделирование</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="84927b2d-2983-430a-bc52-a87407ab5313">
+		<Name>Постановка</Name>
+		<Code>000000005</Code>
+		<Description>Постановка</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e667a073-c6cd-404b-876a-298aa244ac88">
+		<Name>Разработка</Name>
+		<Code>000000003</Code>
+		<Description>Разработка</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="fd9af828-2f95-44ea-8bd7-b1e1d1c10d66">
+		<Name>Тестирование</Name>
+		<Code>000000004</Code>
+		<Description>Тестирование</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

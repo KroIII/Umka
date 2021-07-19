@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.11">
+	<Item id="ed87ea10-cd55-4f5c-b236-1e96fb3c2444">
+		<Name>Анализ</Name>
+		<Code>000000002</Code>
+		<Description>Анализ</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="db36bbef-1b8a-4138-bb31-5b949c8c70ce">
+		<Name>Инцедент</Name>
+		<Code>000000001</Code>
+		<Description>Инцедент</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9678959f-ac37-4f9c-985d-14e09f19d817">
+		<Name>Консультация</Name>
+		<Code>000000004</Code>
+		<Description>Консультация</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="380c8a11-da94-469c-ba81-ec5021783ed3">
+		<Name>Постановка_задачи</Name>
+		<Code>000000003</Code>
+		<Description>Постановка задачи</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="985e8303-dbaf-4fe8-a75a-4450b5b723b8">
+		<Name>Сервис_деск</Name>
+		<Code>000000005</Code>
+		<Description>Сервис деск</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

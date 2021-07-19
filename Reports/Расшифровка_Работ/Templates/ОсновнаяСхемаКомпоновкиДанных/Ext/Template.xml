@@ -1,0 +1,2069 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заявка</dataPath>
+			<field>Заявка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<presentationExpression>Номер</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Описание</dataPath>
+			<field>Описание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗаявки</dataPath>
+			<field>ДатаЗаявки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата заявки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Задание</dataPath>
+			<field>Задание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактноеЛицо</dataPath>
+			<field>КонтактноеЛицо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОписаниеЗаявки</dataPath>
+			<field>ОписаниеЗаявки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание заявки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Часы</dataPath>
+			<field>Часы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СогласованныеЧасы</dataPath>
+			<field>СогласованныеЧасы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласованные часы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Название</dataPath>
+			<field>Название</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СогласованныеЧасы_1</dataPath>
+			<field>СогласованныеЧасы_1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласованные часы 1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидОбращения</dataPath>
+			<field>ВидОбращения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерСервисДеск</dataPath>
+			<field>НомерСервисДеск</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Часы_2</dataPath>
+			<field>Часы_2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часы 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ЗаявкаЧекЛисты.Заявка КАК Заявка,
+	ЗаявкаЧекЛисты.Заявка.Номер КАК Номер,
+	ЗаявкаЧекЛисты.Заявка.Дата КАК ДатаЗаявки,
+	ЗаявкаЧекЛисты.Сотрудник КАК Сотрудник,
+	ЗаявкаЧекЛисты.Описание КАК Описание,
+	ВЫБОР
+		КОГДА ВЫБОР
+				КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+					ТОГДА 0
+				ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+			КОНЕЦ * ВЫБОР
+				КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+					ТОГДА 1
+				ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+			КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+					КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+						ТОГДА 0
+					ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+				КОНЕЦ * ВЫБОР
+					КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+						ТОГДА 1
+					ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+				КОНЕЦ КАК ЧИСЛО(12, 0))) &lt;= 0
+			ТОГДА ВЫБОР
+					КОГДА ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА 0
+							ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА 0
+								ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 1 &lt;= 0.25
+						ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+										ТОГДА 0
+									ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+								КОНЕЦ * ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+										ТОГДА 1
+									ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+								КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.25 - 1
+					КОГДА ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА 0
+							ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА 0
+								ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 1 &lt;= 0.5
+						ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+										ТОГДА 0
+									ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+								КОНЕЦ * ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+										ТОГДА 1
+									ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+								КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.5 - 1
+					КОГДА ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА 0
+							ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА 0
+								ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 1 &lt;= 0.75
+						ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+										ТОГДА 0
+									ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+								КОНЕЦ * ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+										ТОГДА 1
+									ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+								КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.75 - 1
+					ИНАЧЕ ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА 0
+								ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+							ТОГДА 0
+						ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+					КОНЕЦ * ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+							ТОГДА 1
+						ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+					КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА 0
+							ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ КАК ЧИСЛО(12, 0))) &lt;= 0.25
+					ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА 0
+								ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.25
+				КОГДА ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+							ТОГДА 0
+						ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+					КОНЕЦ * ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+							ТОГДА 1
+						ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+					КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА 0
+							ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ КАК ЧИСЛО(12, 0))) &lt;= 0.5
+					ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА 0
+								ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.5
+				КОГДА ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+							ТОГДА 0
+						ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+					КОНЕЦ * ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+							ТОГДА 1
+						ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+					КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА 0
+							ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ КАК ЧИСЛО(12, 0))) &lt;= 0.75
+					ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА 0
+								ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.75
+				ИНАЧЕ (ВЫРАЗИТЬ(ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА 0
+							ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ КАК ЧИСЛО(12, 0))) + 1
+			КОНЕЦ
+	КОНЕЦ КАК Часы,
+	ЗаявкаЧекЛисты.Дата КАК Дата,
+	ЗаявкаЧекЛисты.Задание КАК Задание,
+	ЗаявкаЧекЛисты.Заявка.КонтактноеЛицо КАК КонтактноеЛицо,
+	ЗаявкаЧекЛисты.Заявка.Описание КАК ОписаниеЗаявки,
+	ЗаявкаЧекЛисты.Заявка.Контрагент КАК Контрагент,
+	ВЫБОР
+		КОГДА ВЫБОР
+				КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+					ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+				ИНАЧЕ 0
+			КОНЕЦ * ВЫБОР
+				КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+					ТОГДА 1
+				ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+			КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+					КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+						ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+					ИНАЧЕ 0
+				КОНЕЦ * ВЫБОР
+					КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+						ТОГДА 1
+					ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+				КОНЕЦ КАК ЧИСЛО(12, 0))) &lt;= 0
+			ТОГДА ВЫБОР
+					КОГДА ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+							ИНАЧЕ 0
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+								ИНАЧЕ 0
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 1 &lt;= 0.25
+						ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+										ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+									ИНАЧЕ 0
+								КОНЕЦ * ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+										ТОГДА 1
+									ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+								КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.25 - 1
+					КОГДА ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+							ИНАЧЕ 0
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+								ИНАЧЕ 0
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 1 &lt;= 0.5
+						ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+										ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+									ИНАЧЕ 0
+								КОНЕЦ * ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+										ТОГДА 1
+									ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+								КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.5 - 1
+					КОГДА ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+							ИНАЧЕ 0
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+								ИНАЧЕ 0
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 1 &lt;= 0.75
+						ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+										ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+									ИНАЧЕ 0
+								КОНЕЦ * ВЫБОР
+									КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+										ТОГДА 1
+									ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+								КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.75 - 1
+					ИНАЧЕ ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+								ИНАЧЕ 0
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+							ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+						ИНАЧЕ 0
+					КОНЕЦ * ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+							ТОГДА 1
+						ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+					КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+							ИНАЧЕ 0
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ КАК ЧИСЛО(12, 0))) &lt;= 0.25
+					ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+								ИНАЧЕ 0
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.25
+				КОГДА ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+							ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+						ИНАЧЕ 0
+					КОНЕЦ * ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+							ТОГДА 1
+						ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+					КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+							ИНАЧЕ 0
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ КАК ЧИСЛО(12, 0))) &lt;= 0.5
+					ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+								ИНАЧЕ 0
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.5
+				КОГДА ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+							ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+						ИНАЧЕ 0
+					КОНЕЦ * ВЫБОР
+						КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+							ТОГДА 1
+						ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+					КОНЕЦ - (ВЫРАЗИТЬ(ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+							ИНАЧЕ 0
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ КАК ЧИСЛО(12, 0))) &lt;= 0.75
+					ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+									ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+								ИНАЧЕ 0
+							КОНЕЦ * ВЫБОР
+								КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+									ТОГДА 1
+								ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+							КОНЕЦ КАК ЧИСЛО(12, 0))) + 0.75
+				ИНАЧЕ (ВЫРАЗИТЬ(ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+								ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+							ИНАЧЕ 0
+						КОНЕЦ * ВЫБОР
+							КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+								ТОГДА 1
+							ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+						КОНЕЦ КАК ЧИСЛО(12, 0))) + 1
+			КОНЕЦ
+	КОНЕЦ КАК СогласованныеЧасы_1,
+	ПОДСТРОКА(ЗаявкаЧекЛисты.Заявка.Коментарий, 1, 50) КАК Комментарий,
+	ЗаявкаЧекЛисты.Заявка.Название КАК Название,
+	ВЫБОР
+		КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+			ТОГДА ЗаявкаЧекЛисты.Заявка.СогласованныеЧасы
+		ИНАЧЕ 0
+	КОНЕЦ КАК СогласованныеЧасы,
+	ЗаявкаЧекЛисты.ВидОбращения КАК ВидОбращения,
+	ЗаявкаЧекЛисты.НомерСервисДеск КАК НомерСервисДеск,
+	ВЫБОР
+		КОГДА ЗаявкаЧекЛисты.Заявка.ВыводитьВОтчетСогласованныеЧасы
+			ТОГДА 0
+		ИНАЧЕ ЗаявкаЧекЛисты.ЧасыКлиенту * ВЫБОР
+				КОГДА ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот = 0
+					ТОГДА 1
+				ИНАЧЕ ЗаявкаЧекЛисты.Заявка.Контрагент.КоэффДляРасшифровкиРабот
+			КОНЕЦ
+	КОНЕЦ КАК Часы_2
+ИЗ
+	РегистрСведений._РаботыЗаДень КАК ЗаявкаЧекЛисты
+ГДЕ
+	ВЫБОР
+			КОГДА НЕ ЗаявкаЧекЛисты.Заявка.ДатаАкта = ДАТАВРЕМЯ(1, 1, 1)
+				ТОГДА ЗаявкаЧекЛисты.Заявка.ДатаАкта МЕЖДУ &amp;Дата1 И &amp;Дата2
+			ИНАЧЕ ЗаявкаЧекЛисты.Дата МЕЖДУ &amp;Дата1 И &amp;Дата2
+					И ЗаявкаЧекЛисты.Заявка.Техподдержка
+		КОНЕЦ
+	И ЗаявкаЧекЛисты.Часы &lt;&gt; 0</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Описание</dataPath>
+		<expression>выбор когда номерсервисДеск = "" тогда "" иначе номерсервисДеск + " "конец 
++ выбор когда строка(видобращения) = "" тогда "" иначе   строка(видобращения) +  " 
+" конец + Описание</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Описание</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>Часы</dataPath>
+		<expression>Выбор когда СогласованныеЧасы = 0 тогда  Сумма(Часы) иначе Максимум(СогласованныеЧасы) конец</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Часы</dataPath>
+		<expression>сумма(вычислитьвыражениесгруппировкоймассив("Выбор когда СогласованныеЧасы = 0 тогда  Сумма(Часы) иначе Максимум(СогласованныеЧасы) конец","Заявка") )</expression>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<parameter>
+		<name>Дата1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>Дата2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Контрагент</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контрагент</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef._Контрагенты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Адрес</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Расшифровка работ</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Контрагент</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>за период с </v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ДатаН</dcsat:value>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>  по </v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ДатаК</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell/>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.875</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Адрес</dcsat:name>
+			<dcsat:expression>""</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Контрагент</dcsat:name>
+			<dcsat:expression>_ОбщийМодульСервер.ПолучитьПолноеПредставлениеКонтрагента(ПараметрыДанных.Контрагент)</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ДатаН</dcsat:name>
+			<dcsat:expression>формат(ПараметрыДанных.Дата1,"ДЛФ=Д")</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ДатаК</dcsat:name>
+			<dcsat:expression>формат(ПараметрыДанных.Дата2,"ДЛФ=Д")</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяВысота</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">31.5</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">89.375</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">89.375</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяВысота</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">31.5</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">89.375</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">89.375</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Руководитель ООО «ВБ «Умные технологии» ________________ Павлов А.А.                                                       </v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">89.375</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">89.375</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+	</template>
+	<groupHeaderTemplate>
+		<groupName>Заголовок</groupName>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupHeaderTemplate>
+	<groupHeaderTemplate>
+		<groupName>Подвал</groupName>
+		<templateType>Header</templateType>
+		<template>Макет2</template>
+	</groupHeaderTemplate>
+	<settingsVariant>
+		<dcsset:name>ОтчетПоЗаявкамДляКлиента</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расшифровка работ</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаЗаявки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заявка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Название</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Описание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КонтактноеЛицо</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Задание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Описание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Часы</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:Field">ПараметрыДанных.Контрагент</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>a94e10c1-39b4-4535-a38c-35469713c0f2</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Контрагент</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>91dc08bf-4085-4f40-ac33-4daae1180abb</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Дата</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КонтактноеЛицо</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">40</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ОписаниеЗаявки</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">40</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Задание</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">40</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Описание</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">40</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Приоритет</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">4</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Стадия</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Сотрудник</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Описание</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Заголовок</dcsset:name>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+						<dcsset:use>false</dcsset:use>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МакетОформления</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">БезОформления</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>КоличествоЗаписей</dcscor:parameter>
+						<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипМакета</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionGroupTemplateType">Vertical</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ДатаЗаявки</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Заявка</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Название</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Контрагент</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КонтактноеЛицо</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Комментарий</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:use>false</dcsset:use>
+				<dcsset:name>Подвал</dcsset:name>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+						<dcsset:use>false</dcsset:use>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МакетОформления</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">БезОформления</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>КоличествоЗаписей</dcscor:parameter>
+						<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипМакета</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionGroupTemplateType">Vertical</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

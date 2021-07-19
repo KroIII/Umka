@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодСтроки</dataPath>
+			<field>КодСтроки</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Задача</dataPath>
+			<field>Задача</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заявка</dataPath>
+			<field>Заявка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧасыЗаявка</dataPath>
+			<field>ЧасыЗаявка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часы заявка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧасыВнешнегоСотрудника</dataPath>
+			<field>ЧасыВнешнегоСотрудника</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часы внешнего сотрудника</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СотрудникЗаявка</dataPath>
+			<field>СотрудникЗаявка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник заявка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СотрудникВыставленный</dataPath>
+			<field>СотрудникВыставленный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник выставленный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧасыВыставленные</dataPath>
+			<field>ЧасыВыставленные</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часы выставленные</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОписаниеВыставленное</dataPath>
+			<field>ОписаниеВыставленное</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание выставленное</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОписаниеЗаявка</dataPath>
+			<field>ОписаниеЗаявка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание заявка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	_РаботыЗаДень.Заявка КАК Заявка,
+	_РаботыЗаДень.КодСтроки КАК КодСтроки,
+	_РаботыЗаДень.Часы КАК Часы,
+	_РаботыЗаДень.Сотрудник КАК Сотрудник,
+	ЗНАЧЕНИЕ(Задача._ИсполнениеЗадач.ПустаяСсылка) КАК Задача,
+	ИСТИНА КАК ЧасыВнешнегоСотрудника,
+	_РаботыЗаДень.Описание КАК Описание
+ПОМЕСТИТЬ ВТРС
+ИЗ
+	РегистрСведений._РаботыЗаДень КАК _РаботыЗаДень
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	_ИсполнениеЗадачЧекЛисты.Ссылка.БизнесПроцесс.Заявка,
+	_ИсполнениеЗадачЧекЛисты.КодСтроки,
+	_ИсполнениеЗадачЧекЛисты.Часы,
+	_ИсполнениеЗадачЧекЛисты.Ссылка.Исполнитель,
+	_ИсполнениеЗадачЧекЛисты.Ссылка,
+	ЛОЖЬ,
+	_ИсполнениеЗадачЧекЛисты.Описание
+ИЗ
+	Задача._ИсполнениеЗадач.ЧекЛисты КАК _ИсполнениеЗадачЧекЛисты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	_ЗаявкаЧекЛисты.Часы КАК Часы,
+	_ЗаявкаЧекЛисты.Сотрудник КАК Сотрудник,
+	_ЗаявкаЧекЛисты.КодСтроки КАК КодСтроки,
+	_ЗаявкаЧекЛисты.Задача КАК Задача,
+	_ЗаявкаЧекЛисты.Ссылка КАК Ссылка,
+	_ЗаявкаЧекЛисты.Описание КАК Описание
+ПОМЕСТИТЬ ВТ_Задачи
+ИЗ
+	Документ._Заявка.ЧекЛисты КАК _ЗаявкаЧекЛисты
+ГДЕ
+	НЕ(_ЗаявкаЧекЛисты.КодСтроки = "00000000-0000-0000-0000-000000000000"
+				ИЛИ _ЗаявкаЧекЛисты.КодСтроки = "")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЕСТЬNULL(ВТ_Задачи.Ссылка, ВТРС.Заявка) КАК Заявка,
+	ЕСТЬNULL(ВТ_Задачи.КодСтроки, ВТРС.КодСтроки) КАК КодСтроки,
+	ВТ_Задачи.Часы КАК ЧасыЗаявка,
+	ВТ_Задачи.Сотрудник КАК СотрудникЗаявка,
+	ЕСТЬNULL(ВТ_Задачи.Задача, ВТРС.Задача) КАК Задача,
+	ВТРС.Часы КАК ЧасыВыставленные,
+	ВТРС.Сотрудник КАК СотрудникВыставленный,
+	ВТРС.ЧасыВнешнегоСотрудника КАК ЧасыВнешнегоСотрудника,
+	ВТРС.Описание КАК ОписаниеВыставленное,
+	ВТ_Задачи.Описание КАК ОписаниеЗаявка
+ИЗ
+	ВТРС КАК ВТРС
+		ПОЛНОЕ СОЕДИНЕНИЕ ВТ_Задачи КАК ВТ_Задачи
+		ПО ВТРС.Заявка = ВТ_Задачи.Ссылка
+			И ВТРС.КодСтроки = ВТ_Задачи.КодСтроки
+			И ВТРС.Задача = ВТ_Задачи.Задача
+ГДЕ
+	(ВТ_Задачи.Сотрудник &lt;&gt; ВТРС.Сотрудник
+			ИЛИ ВТ_Задачи.Описание &lt;&gt; ВТРС.Описание
+			ИЛИ ВТ_Задачи.Часы &lt;&gt; ВТРС.Часы
+			ИЛИ ВТ_Задачи.Сотрудник ЕСТЬ NULL
+			ИЛИ ВТРС.Сотрудник ЕСТЬ NULL)</query>
+	</dataSet>
+	<settingsVariant>
+		<dcsset:name>Неперенесенные часы</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Неперенесенные часы</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заявка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЧасыВнешнегоСотрудника</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Задача</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СотрудникЗаявка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СотрудникВыставленный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЧасыЗаявка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЧасыВыставленные</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОписаниеЗаявка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОписаниеВыставленное</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Заявка</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

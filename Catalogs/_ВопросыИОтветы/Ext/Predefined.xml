@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.11">
+	<Item id="4879ed2a-495d-44e0-99b4-a4910adf3be1">
+		<Name>АналитикКонсультант</Name>
+		<Code>000000003</Code>
+		<Description>Аналитик консультант</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="13d00a16-21e3-4f71-b4e5-ee71acb16384">
+		<Name>ИнструкцияУмка</Name>
+		<Code>000000001</Code>
+		<Description>Инструкция умка</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="54974533-fab3-408b-b466-fea9aa5f458b">
+		<Name>Разработчику</Name>
+		<Code>000000002</Code>
+		<Description>Разработчику</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="63fc8fc8-621d-49e3-994d-f8411d03f8bd">
+		<Name>СервисИнженер</Name>
+		<Code>000000004</Code>
+		<Description>Сервис инженер</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

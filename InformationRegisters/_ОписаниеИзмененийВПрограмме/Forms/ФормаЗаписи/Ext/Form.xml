@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Команды" id="78">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<InputField name="Период" id="1">
+					<DataPath>Запись.Period</DataPath>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='dd.MM.yyyy ЧЧ:мм'</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ПериодПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CommandBar name="ФормаД" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма Д</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма Д</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CommandSource>Form</CommandSource>
+					<ExtendedTooltip name="ФормаДРасширеннаяПодсказка" id="81"/>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа2" id="56">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<Page name="ИзмененияДанных" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменения данных</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменения данных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ИзмененияДанныхРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<CommandBar name="РедактированиеТаблицы" id="12">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Редактирование таблицы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Редактирование таблицы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CommandSource>Item.Изменения</CommandSource>
+							<ExtendedTooltip name="РедактированиеТаблицыРасширеннаяПодсказка" id="13"/>
+							<ChildItems>
+								<Button name="ДобавитьСтроку" id="10">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ДобавитьСтроку</CommandName>
+									<ExtendedTooltip name="ДобавитьСтрокуРасширеннаяПодсказка" id="11"/>
+								</Button>
+								<Button name="Редактирование" id="14">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Item.Изменения.StandardCommand.Edit</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="РедактированиеРасширеннаяПодсказка" id="15"/>
+								</Button>
+								<Button name="ИзмененияКартинка" id="54">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Item.Изменения.StandardCommand.Picture</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ИзмененияКартинкаРасширеннаяПодсказка" id="55"/>
+								</Button>
+								<Popup name="Границы" id="16" DisplayImportance="High">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Границы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Границы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГраницыРасширеннаяПодсказка" id="17"/>
+									<ChildItems>
+										<Button name="ИзмененияГраницаСлева" id="18">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Изменения.StandardCommand.BorderLeft</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ИзмененияГраницаСлеваРасширеннаяПодсказка" id="19"/>
+										</Button>
+										<Button name="ИзмененияГраницаСверху" id="20">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Изменения.StandardCommand.BorderTop</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ИзмененияГраницаСверхуРасширеннаяПодсказка" id="21"/>
+										</Button>
+										<Button name="ИзмененияГраницаСправа" id="22">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Изменения.StandardCommand.BorderRight</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ИзмененияГраницаСправаРасширеннаяПодсказка" id="23"/>
+										</Button>
+										<Button name="ИзмененияГраницаСнизу" id="24">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Изменения.StandardCommand.BorderBottom</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ИзмененияГраницаСнизуРасширеннаяПодсказка" id="25"/>
+										</Button>
+										<Button name="ИзмененияГраницаВезде" id="26">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Изменения.StandardCommand.BorderAll</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ИзмененияГраницаВездеРасширеннаяПодсказка" id="27"/>
+										</Button>
+										<Button name="ИзмененияГраницаВокруг" id="28">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Изменения.StandardCommand.BorderOutline</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ИзмененияГраницаВокругРасширеннаяПодсказка" id="29"/>
+										</Button>
+										<Button name="ИзмененияГраницаВнутри" id="30">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Изменения.StandardCommand.BorderInside</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ИзмененияГраницаВнутриРасширеннаяПодсказка" id="31"/>
+										</Button>
+										<Button name="ИзмененияТолстаяГраницаВокруг" id="32">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Изменения.StandardCommand.ThickBorderOutline</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ИзмененияТолстаяГраницаВокругРасширеннаяПодсказка" id="33"/>
+										</Button>
+										<Button name="ИзмененияТолстаяГраницаСверху" id="34">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Изменения.StandardCommand.ThickBorderTop</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ИзмененияТолстаяГраницаСверхуРасширеннаяПодсказка" id="35"/>
+										</Button>
+										<Button name="ИзмененияТолстаяГраницаСнизу" id="36">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Изменения.StandardCommand.ThickBorderBottom</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ИзмененияТолстаяГраницаСнизуРасширеннаяПодсказка" id="37"/>
+										</Button>
+										<Button name="ИзмененияНетГраницы" id="38">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.Изменения.StandardCommand.BorderNone</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ИзмененияНетГраницыРасширеннаяПодсказка" id="39"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+								<Button name="ИзмененияЦветФона" id="40">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.Изменения.StandardCommand.BackColor</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ИзмененияЦветФонаРасширеннаяПодсказка" id="41"/>
+								</Button>
+								<Button name="ИзмененияЦветТекста" id="42">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.Изменения.StandardCommand.TextColor</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ИзмененияЦветТекстаРасширеннаяПодсказка" id="43"/>
+								</Button>
+								<Button name="ИзмененияЦветГраницы" id="44">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.Изменения.StandardCommand.BorderColor</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ИзмененияЦветГраницыРасширеннаяПодсказка" id="45"/>
+								</Button>
+								<Button name="ИзмененияШрифт" id="46">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.Изменения.StandardCommand.Font</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ИзмененияШрифтРасширеннаяПодсказка" id="47"/>
+								</Button>
+								<Button name="ИзмененияПолужирный" id="48">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.Изменения.StandardCommand.Bold</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ИзмененияПолужирныйРасширеннаяПодсказка" id="49"/>
+								</Button>
+								<Button name="ИзмененияНаклонный" id="50">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.Изменения.StandardCommand.Italic</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ИзмененияНаклонныйРасширеннаяПодсказка" id="51"/>
+								</Button>
+								<Button name="ИзмененияПодчеркивание" id="52">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.Изменения.StandardCommand.Underline</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ИзмененияПодчеркиваниеРасширеннаяПодсказка" id="53"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<SpreadSheetDocumentField name="Изменения" id="7">
+							<DataPath>Изменения</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ShowGrid>true</ShowGrid>
+							<ShowHeaders>true</ShowHeaders>
+							<Edit>true</Edit>
+							<ContextMenu name="ИзмененияКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ИзмененияРасширеннаяПодсказка" id="9"/>
+						</SpreadSheetDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="НеПоказыватьПользователям" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не показывать пользователям</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не показывать пользователям</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="НеПоказыватьПользователямРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<Table name="Просмотрели" id="62">
+							<Representation>List</Representation>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>Просмотрели</DataPath>
+							<RowPictureDataPath>Просмотрели.Picture</RowPictureDataPath>
+							<ContextMenu name="ПросмотрелиКонтекстноеМеню" id="63"/>
+							<AutoCommandBar name="ПросмотрелиКоманднаяПанель" id="64"/>
+							<ExtendedTooltip name="ПросмотрелиРасширеннаяПодсказка" id="65"/>
+							<SearchStringAddition name="ПросмотрелиСтрокаПоиска" id="66">
+								<AdditionSource>
+									<Item>Просмотрели</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПросмотрелиСтрокаПоискаКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="ПросмотрелиСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПросмотрелиСостояниеПросмотра" id="69">
+								<AdditionSource>
+									<Item>Просмотрели</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПросмотрелиСостояниеПросмотраКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="ПросмотрелиСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПросмотрелиУправлениеПоиском" id="72">
+								<AdditionSource>
+									<Item>Просмотрели</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПросмотрелиУправлениеПоискомКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="ПросмотрелиУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ПросмотрелиЗначение" id="75">
+									<DataPath>Просмотрели.Value</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПросмотрелиЗначениеКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ПросмотрелиЗначениеРасширеннаяПодсказка" id="77"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager._ОписаниеИзмененийВПрограмме</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Изменения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Просмотрели" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотрели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьСтроку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить строку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить строку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьСтроку</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

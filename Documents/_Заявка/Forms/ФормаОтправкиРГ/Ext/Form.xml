@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="СписокПользователей" id="1">
+			<Representation>List</Representation>
+			<Header>false</Header>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<DataPath>СписокПользователей</DataPath>
+			<RowPictureDataPath>СписокПользователей.Picture</RowPictureDataPath>
+			<ContextMenu name="СписокПользователейКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокПользователейКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокПользователейСнятьФлажки" id="27">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокПользователей.StandardCommand.UncheckAll</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="СписокПользователейСнятьФлажкиРасширеннаяПодсказка" id="28"/>
+					</Button>
+					<Button name="СписокПользователейУстановитьФлажки" id="25">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокПользователей.StandardCommand.CheckAll</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="СписокПользователейУстановитьФлажкиРасширеннаяПодсказка" id="26"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокПользователейРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокПользователейСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>СписокПользователей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокПользователейСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокПользователейСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокПользователейСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>СписокПользователей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокПользователейСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокПользователейСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокПользователейУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>СписокПользователей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокПользователейУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокПользователейУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">СписокПользователейПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">СписокПользователейПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="СписокПользователейПометка" id="19">
+					<DataPath>СписокПользователей.Check</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокПользователейПометкаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="СписокПользователейПометкаРасширеннаяПодсказка" id="21"/>
+				</CheckBoxField>
+				<InputField name="СписокПользователейЗначение" id="14">
+					<DataPath>СписокПользователей.Value</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПользователейЗначениеКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокПользователейЗначениеРасширеннаяПодсказка" id="16"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Button name="Разослать" id="17">
+			<Type>UsualButton</Type>
+			<DefaultButton>true</DefaultButton>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<CommandName>Form.Command.Разослать</CommandName>
+			<ExtendedTooltip name="РазослатьРасширеннаяПодсказка" id="18"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокПользователей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Разослать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разослать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разослать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Разослать</Action>
+		</Command>
+	</Commands>
+</Form>

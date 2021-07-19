@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Что нового в конфигурации</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="58">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаТехническаяИнформацияИЗакрыть" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Техническая информация и закрыть</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТехническаяИнформацияИЗакрытьExtendedTooltip" id="41"/>
+					<ChildItems>
+						<CheckBoxField name="Просмотрено" id="53">
+							<DataPath>Просмотрено</DataPath>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПросмотреноКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ПросмотреноРасширеннаяПодсказка" id="55"/>
+						</CheckBoxField>
+						<Button name="Обновить" id="62">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<CommandName>Form.Command.Обновить</CommandName>
+							<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="63"/>
+						</Button>
+						<Button name="Закрыть" id="56">
+							<Type>UsualButton</Type>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<CommandName>Form.StandardCommand.Close</CommandName>
+							<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="57"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<CommandBar name="Группа2" id="60">
+					<CommandSource>Item.ОписаниеОбновлений</CommandSource>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<Button name="Найти" id="14">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.ОписаниеОбновлений.StandardCommand.Find</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Найти...</v8:content>
+								</v8:item>
+							</Title>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="НайтиExtendedTooltip" id="32"/>
+						</Button>
+						<Button name="РазвернутьВсеГруппы" id="21">
+							<Type>CommandBarButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Item.ОписаниеОбновлений.StandardCommand.ExpandAllGroups</CommandName>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="РазвернутьВсеГруппыExtendedTooltip" id="35"/>
+						</Button>
+						<Button name="ОписаниеОбновленийСвернутьВсеГруппы" id="45">
+							<Type>CommandBarButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Item.ОписаниеОбновлений.StandardCommand.CollapseAllGroups</CommandName>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ОписаниеОбновленийСвернутьВсеГруппыРасширеннаяПодсказка" id="46"/>
+						</Button>
+						<ButtonGroup name="ОписаниеОбновленийГруппа" id="51">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание обновлений группа</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОписаниеОбновленийГруппаРасширеннаяПодсказка" id="52"/>
+							<ChildItems>
+								<Button name="Сохранить" id="7">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Item.ОписаниеОбновлений.StandardCommand.Save</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сохранить как...</v8:content>
+										</v8:item>
+									</Title>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="СохранитьExtendedTooltip" id="34"/>
+								</Button>
+								<Button name="Печать" id="15">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Item.ОписаниеОбновлений.StandardCommand.Print</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.Print</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ПечатьExtendedTooltip" id="36"/>
+								</Button>
+								<Button name="ОписаниеОбновленийПредварительныйПросмотр" id="47">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ОписаниеОбновлений.StandardCommand.Preview</CommandName>
+									<ExtendedTooltip name="ОписаниеОбновленийПредварительныйПросмотрРасширеннаяПодсказка" id="48"/>
+								</Button>
+								<Button name="ОписаниеОбновленийПараметрыСтраницы" id="49">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ОписаниеОбновлений.StandardCommand.PageSetup</CommandName>
+									<ExtendedTooltip name="ОписаниеОбновленийПараметрыСтраницыРасширеннаяПодсказка" id="50"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<Button name="Справка" id="4">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаExtendedTooltip" id="37"/>
+						</Button>
+						<Button name="ИзменитьФорму" id="19">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+							<ExtendedTooltip name="ИзменитьФормуExtendedTooltip" id="33"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ОтложенноеОбновление" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отложенное обновление</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОтложенноеОбновлениеExtendedTooltip" id="28"/>
+		</UsualGroup>
+		<SpreadSheetDocumentField name="ОписаниеОбновлений" id="1">
+			<DataPath>ОписаниеОбновлений</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание обновлений</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>None</TitleLocation>
+			<Width>80</Width>
+			<Height>20</Height>
+			<VerticalScrollBar>true</VerticalScrollBar>
+			<HorizontalScrollBar>true</HorizontalScrollBar>
+			<SelectionShowMode>WhenActive</SelectionShowMode>
+			<EnableStartDrag>false</EnableStartDrag>
+			<EnableDrag>false</EnableDrag>
+			<ContextMenu name="ОписаниеОбновленийКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОписаниеОбновленийExtendedTooltip" id="38"/>
+			<Events>
+				<Event name="Selection">ОписаниеОбновленийВыбор</Event>
+			</Events>
+		</SpreadSheetDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОписаниеОбновлений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание обновлений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Периоды" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Периоды</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Просмотрено" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотрено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОткрыватьВЛюбомСлучае" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открывать в любом случае</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОтложенноеОбновлениеДанных" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняются дополнительные процедуры обработки данных</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтложенноеОбновлениеДанных</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Просмотрено" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотрено</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотрено</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="Обновить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ОткрыватьВЛюбомСлучае">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>
